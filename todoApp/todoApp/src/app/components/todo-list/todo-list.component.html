@@ -1,0 +1,26 @@
+<h2>Todo List</h2>
+
+        
+        <div *ngFor="let todo of todos">
+            <div *ngIf="todo.editMode; then thenBlock; else elseBlock"></div>
+              
+            <ng-template #elseBlock>
+                <p>{{todo.title}}</p>
+                <p>{{todo.project}}</p>
+                <p>{{todo.done}}</p>
+                <p>{{todo.details}}</p>
+                <p> <button (click)="onSelect(todo)">Edit</button>
+                    <button>Delete</button></p>
+            </ng-template>
+
+            <ng-template #thenBlock>
+        
+                <h3>Title:</h3>
+                <input [(ngModel)]="currentTask.title" type="text">
+                <h3>Project</h3>
+                <input [(ngModel)]="currentTask.project" type="text">
+                <button (click)="onClick(todo)">Save changes</button>
+         
+            </ng-template>
+            
+        </div>
