@@ -15,7 +15,6 @@ export class TodoListService {
       project: 'Project A',
       done: false,
       editMode: false,
-      deleted: false,
       details: 'First project needs to ...'
     },
     {
@@ -24,7 +23,6 @@ export class TodoListService {
       project: 'Project B',
       done: false,
       editMode: false,
-      deleted: false,
       details: 'Second project needs to ...'
     },
     {
@@ -33,7 +31,6 @@ export class TodoListService {
       project: 'Project C',
       done: false,
       editMode: false,
-      deleted: false,
       details: 'Third project needs to ...'
     }
  ]
@@ -61,6 +58,10 @@ export class TodoListService {
 
     this.todos.splice(elementsIndex, 1);
 
+  }
+
+  addTask (todoTask) {
+    this.todos.push(todoTask);
   }
   
 

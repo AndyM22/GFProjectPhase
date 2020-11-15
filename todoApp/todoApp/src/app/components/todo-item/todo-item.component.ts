@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ITask } from '../../task';
 
 @Component({
   selector: 'app-todo-item',
@@ -7,8 +6,6 @@ import { ITask } from '../../task';
   styleUrls: ['./todo-item.component.css']
 })
 export class TodoItemComponent implements OnInit {
-
-  @Input('parentData') public todoList;
 
   constructor(){};
 

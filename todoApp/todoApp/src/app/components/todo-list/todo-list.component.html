@@ -10,7 +10,7 @@
                 <p>{{todo.done}}</p>
                 <p>{{todo.details}}</p>
                 <p> <button (click)="onSelect(todo)">Edit</button>
-                    <button>Delete</button></p>
+                    <button (click)="delete(todo)">Delete</button></p>
             </ng-template>
 
             <ng-template #thenBlock>

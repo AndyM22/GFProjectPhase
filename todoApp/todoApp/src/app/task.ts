@@ -3,7 +3,6 @@ export interface ITask {
     title: string;
     project: string;
     done: boolean;
-    editMode: boolean,
-    deleted: boolean,
+    editMode: boolean;
     details?: string;
 }

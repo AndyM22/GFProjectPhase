@@ -26,7 +26,7 @@ export class TodoListComponent implements OnInit {
   }
 
   delete(task) {
-    this.currentTask.deleted = true;
+    this._todoListService.deleteTask(task);
   }
 
   ngOnInit(): void {
